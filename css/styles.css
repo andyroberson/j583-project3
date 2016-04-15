@@ -18,7 +18,7 @@ h1 {
   padding: 20px;
   margin: 10px;
   font: 12px "Nunito", sans-serif;
-  background: lightsteelblue;
+  background: #fff;
   border: 1px;
   border-radius: 2px;
   pointer-events: none;
@@ -28,13 +28,12 @@ h1 {
   font-size:14px;
 }
 #tooltip{
-  background:rgba(0,0,0,0.9);
   border:1px solid grey;
   border-radius:5px;
   font-size:12px;
   width:auto;
   padding:4px;
-  color:white;
+  color:black;
   opacity:0;
 }
 #tooltip table{
