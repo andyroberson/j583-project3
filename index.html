@@ -63,7 +63,7 @@
 </div>
   <div id="test">yo</div>
 <div id="tooltip"></div><!-- div to hold tooltip. -->
-<svg width="960" height="600" id="statesvg"></svg> <!-- svg to hold the map. -->
+<div class="svg-container" style="height: 50%; width: 50%;background: #eee"><svg width="960" height="600" id="statesvg"></svg></div> <!-- svg to hold the map. 960 * 600-->
 <script src="uStates.js"></script> <!-- creates uStates. -->
 <script>
 function report(option) {
@@ -84,12 +84,9 @@ function report(option) {
 <script>
 //TEST works (it's in uStates.js under uStatesPaths); so what need to do is input data into there;
 //maybe do a baby array, that contains one boy array and one girl array? that's boy, one that's girls?
-	function tooltipHtml(n, d, test){	/* function to create html content string in tooltip div. */
+	function tooltipHtml(n, d, names){	/* function to create html content string in tooltip div. */
 		return "<h4>"+n+"</h4><table>"+
-			"<tr><td>Low</td><td>"+test.boys+test.girls+"</td></tr>"+
-			"<tr><td>Average</td><td>"+(d.avg)+"</td></tr>"+
-			"<tr><td>High</td><td>"+(d.high)+"</td></tr>"+
-      "<tr><td>babies are cool</td></tr>"+
+			"<tr><td>Low</td><td>"+names.boys[0]+names.girls[0]+"</td></tr>"+
 			"</table>";
 	}
 
