@@ -417,7 +417,7 @@ var uStatePaths=[
 	//drawing the map
 	uStates.draw = function(id, data, toolTip){
 
-		//what happens when you hover over #tooltip 
+		//what happens when you hover over #tooltip
 		function mouseOver(d){
 			d3.select("#tooltip").transition().duration(200).style("opacity", .9);
 
@@ -432,7 +432,7 @@ var uStatePaths=[
 
 		d3.select(id).selectAll(".state")
 			.data(uStatePaths).enter().append("path").attr("class","state").attr("d",function(d){ return d.d;})
-			.style("fill", "#F9CDAD")
+			.style("fill", "#FFFCDD")
 			// .style("fill",function(d){ return data[d.id].color; })
 			.on("mouseover", mouseOver).on("mouseout", mouseOut);
 	}

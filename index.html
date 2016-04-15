@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Nunito:300,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -8,27 +9,43 @@
 
 <body>
 <div class="col-md-12">
-  <div class="form-group">
-  <label for="sel1">Select list:</label>
-  <select class="form-control" id="sel1" onchange="report(this.value)">
-    <option value="all">All</option>
-    <option value="boys">boys</option>
-    <option value="girls">girls</option>
-  </select>
-</div>
-<div id="test">yo</div>
+	<div class="row">
+	<div class="col-md-2"></div>
+	<div class="col-md-6" style="margin-bottom:10px; margin-top:-10px">
+		<h1 class="text-left">Popular Names of 2014
+			<img class="duck" src="https://cdn2.iconfinder.com/data/icons/thesquid-ink-40-free-flat-icon-pack/64/rubber-duck-512.png" style="height: 40px; width: auto"></h1>
+			Use this map to compare popularity of baby names by state in 2014.
+				You can use the drop down menu and filter the map to display see the most popular names both of males and females,
+				or choose to see the top 5 male names or the top 5 female names.
+	</div>
+	<div class="col-md-2 form-group" style="margin-top: 10px">
+			<label for="sel1">Names</label>
+			<select class="form-control" id="sel1" onchange="report(this.value)">
+				<option value="all">All Names</option>
+				<option value="boys">Boy Names</option>
+				<option value="girls">Girl Names</option>
+			</select>
+	</div>
+
+
+
 <div id="tooltip"></div><!-- div to hold tooltip. -->
 <div class="map-container" style="margin-left: auto; margin-right: auto;">
-	<svg viewBox="0 0 1500 1200"
-  preserveAspectRatio="xMinYMin meet" id="statesvg"></svg>
-	<svg viewBox="0 0 1500 1200"
-	preserveAspectRatio="xMinYMin meet" id="statesvg2"></svg>
-	<svg viewBox="0 0 1500 1200"
-	preserveAspectRatio="xMinYMin meet" id="statesvg3"></svg>
+	<svg viewBox="0 0 1200 950"
+  preserveAspectRatio="xMinYMin meet" style="margin-left: 15%" id="svg-both"></svg>
+	<svg viewBox="0 0 1200 950"
+  preserveAspectRatio="xMinYMin meet" style="margin-left: 15%" id="svg-boys"></svg>
+	<svg viewBox="0 0 1200 950"
+  preserveAspectRatio="xMinYMin meet" style="margin-left: 15%" id="svg-girls"></svg>
 </div> <!-- svg to hold the map. 960 * 600-->
 </div>
+<footer class="footer">
+      <div class="container">
+        <p class="text-muted">Project by Andy Roberson, Data from Social Security records as of March 8, 2015</p>
+      </div>
+</footer>
 <!-- creates uStates, load data -->
-<script src="uStates.js"></script>
+<script src="js/uStates.js"></script>
 
 <!-- load D3 -->
 <script src="http://d3js.org/d3.v3.min.js"></script>

@@ -1,6 +1,12 @@
+body {font-family: 'Nunito', sans-serif;}
+
+h1 {
+  font-weight: 700;
+}
+
 .state{
   fill: none;
-  stroke: #a9a9a9;
+  stroke: black;
   stroke-width: 1;
 }
 .state:hover{
@@ -11,7 +17,7 @@
   text-align: center;
   padding: 20px;
   margin: 10px;
-  font: 12px sans-serif;
+  font: 12px "Nunito", sans-serif;
   background: lightsteelblue;
   border: 1px;
   border-radius: 2px;
@@ -45,10 +51,13 @@
   text-align:center;
 }
 
-#statesvg2 {
+#svg-boys, #svg-girls {
   display: none;
 }
 
-#statesvg3 {
-  display: none;
+.duck {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
