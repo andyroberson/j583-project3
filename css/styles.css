@@ -8,6 +8,8 @@ h1 {
   fill: none;
   stroke: black;
   stroke-width: 1;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
 }
 .state:hover{
   fill-opacity:0.5;

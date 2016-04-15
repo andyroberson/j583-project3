@@ -49,18 +49,20 @@ function tooltipHtml3(n, d, names){
           $('#svg-boys').css("display", "none");
           $('#svg-girls').css("display", "none");
           $('#svg-both').css("display", "inline");
-          $('.state').css("fill", "pink");
+          $('.state').css("fill", "#FFFCDD");
 	    	}
 
 	      if(option == "boys") {
            $('#svg-girls').css("display", "none");
            $('#svg-both').css("display", "none");
            $('#svg-boys').css("display", "inline");
+           $('.state').css("fill", "#DCF7F3");
 	      }
 
 	      if(option == "girls") {
             $('#svg-boys').css("display", "none");
             $('#svg-both').css("display", "none");
             $('#svg-girls').css("display", "inline");
+            $('.state').css("fill", "#FFD8D8");
 	      }
 			}
