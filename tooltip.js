@@ -49,13 +49,13 @@ function tooltipHtml3(n, d, names){
           $('#svg-boys').css("display", "none");
           $('#svg-girls').css("display", "none");
           $('#svg-both').css("display", "inline");
+          $('.state').css("fill", "pink");
 	    	}
 
 	      if(option == "boys") {
            $('#svg-girls').css("display", "none");
            $('#svg-both').css("display", "none");
            $('#svg-boys').css("display", "inline");
-
 	      }
 
 	      if(option == "girls") {
