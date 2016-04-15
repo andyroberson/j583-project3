@@ -419,7 +419,7 @@ var uStatePaths=[
 
 		//what happens when you hover over #tooltip
 		function mouseOver(d){
-			d3.select("#tooltip").transition().duration(200).style("opacity", .9);
+			d3.select("#tooltip").transition().duration(200).style("opacity", 1);
 
 			d3.select("#tooltip").html(toolTip(d.n, data[d.id], d.names))
 				.style("left", (d3.event.pageX) + "px")
