@@ -426,14 +426,16 @@ var uStatePaths=[
 				.style("top", (d3.event.pageY - 28) + "px");
 		}
 
+
+		//transition on toolti[]
 		function mouseOut(){
 			d3.select("#tooltip").transition().duration(500).style("opacity", 0);
 		}
 
+    //adding data and style to .state class
 		d3.select(id).selectAll(".state")
 			.data(uStatePaths).enter().append("path").attr("class","state").attr("d",function(d){ return d.d;})
 			.style("fill", "#E5F4D2")
-			// .style("fill",function(d){ return data[d.id].color; })
 			.on("mouseover", mouseOver).on("mouseout", mouseOut);
 	}
 	this.uStates=uStates;

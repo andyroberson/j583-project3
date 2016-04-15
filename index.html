@@ -8,15 +8,21 @@
 <link rel="stylesheet" href="css/styles.css">
 
 <body>
+
 <div class="col-md-12">
 	<div class="col-md-2"></div>
-	<div class="col-md-6" style="margin-bottom:25px; margin-left: 8px; margin-top:-10px">
+
+	<!-- Title and Project explanation -->
+	<div class="col-md-6" style="margin-bottom:25px; margin-top:-10px">
 		<h1 class="text-left">Popular Names of 2014
 			<img class="duck" src="https://cdn2.iconfinder.com/data/icons/thesquid-ink-40-free-flat-icon-pack/64/rubber-duck-512.png" style="height: 40px; width: auto"></h1>
-			Use this map to compare popularity of baby names by state in 2014.
+			 <div style="margin-left: 3px">Use this map to compare popularity of baby names by state in 2014.
 				You can use the drop down menu and filter the map to display see the most popular names both of males and females,
 				or choose to see the top 5 male names or the top 5 female names.
+			</div>
 	</div>
+
+	<!-- dropdown selector menu  -->
 	<div class="col-md-2 form-group" style="margin-top: 10px; margin-bottom: 30px;">
 			<label for="sel1">Names</label>
 			<select class="form-control" id="sel1" onchange="report(this.value)">
@@ -26,9 +32,11 @@
 			</select>
 	</div>
 
-	<div id="tooltip"></div><!-- div to hold tooltip. -->
+<!-- div to hold tooltip. -->
+	<div id="tooltip"></div>
 
-	<div class="map-container" style="margin-left: auto; margin-right: auto;">
+	<!-- svg to hold the map. 960 * 600-->
+	<div class="map-container" style="margin-left: auto; margin-right: auto; margin-bottom: -80px">
 		<svg viewBox="0 0 1200 950"
 	  preserveAspectRatio="xMinYMin meet" style="margin-left: 14%" id="svg-both"></svg>
 		<svg viewBox="0 0 1200 950"
@@ -37,12 +45,15 @@
 	  preserveAspectRatio="xMinYMin meet" style="margin-left: 14%" id="svg-girls"></svg>
 	</div>
 </div>
-<!-- svg to hold the map. 960 * 600-->
+
+
+<!-- footer -->
 <footer class="footer">
-      <div class="container">
+      <div class="container text-center">
         <p class="text-muted">Project by Andy Roberson, Data from Social Security records as of March 8, 2015</p>
       </div>
 </footer>
+
 <!-- creates uStates, load data -->
 <script src="js/uStates.js"></script>
 

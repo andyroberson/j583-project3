@@ -45,6 +45,8 @@ function tooltipHtml3(n, d, names){
 
   //hide and show maps based on which is selected
 	function report(option) {
+
+		//show map with all names
 	    if(option == "all") {
           $('#svg-boys').css("display", "none");
           $('#svg-girls').css("display", "none");
@@ -52,6 +54,7 @@ function tooltipHtml3(n, d, names){
           $('.state').css("fill", "#E5F4D2");
 	    	}
 
+		//show map with top boy names
 	      if(option == "boys") {
            $('#svg-girls').css("display", "none");
            $('#svg-both').css("display", "none");
@@ -59,6 +62,7 @@ function tooltipHtml3(n, d, names){
            $('.state').css("fill", "#DCF7F3");
 	      }
 
+   //show map with top girl names
 	      if(option == "girls") {
             $('#svg-boys').css("display", "none");
             $('#svg-both').css("display", "none");
