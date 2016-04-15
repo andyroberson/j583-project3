@@ -1,5 +1,6 @@
 (function(){
 
+//DATA
 var uStatePaths=[
 {
 	id:"HI",
@@ -413,8 +414,10 @@ var uStatePaths=[
 
 	var uStates={};
 
+	//drawing the map
 	uStates.draw = function(id, data, toolTip){
 
+		//what happens when you hover over #tooltip 
 		function mouseOver(d){
 			d3.select("#tooltip").transition().duration(200).style("opacity", .9);
 
